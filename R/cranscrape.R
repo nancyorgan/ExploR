@@ -40,7 +40,7 @@ cranberry2013 = get_cran_data(url2013)
 cranberry2014 = get_cran_data(url2014)
 cranberry2015 = get_cran_data(url2015)
 # Check that all dates came though
-unique(cranberry$date)
+unique(cranberry2012$date) # etc...
 
 write.table(cranberry2012, "/Users/nancyorgan/Desktop/cranberry2012.txt", sep = ",")
 write.table(cranberry2013, "/Users/nancyorgan/Desktop/cranberry2013.txt", sep = ",")
@@ -79,7 +79,7 @@ for(j in 1:length(heavy_hitters)){
   for(i in 1:length(unique(crantop$date))){
   heavy_counts[i,j] = length(crantop$package[crantop$date == unique(crantop$date)[i] & 
                                                crantop$package == heavy_hitters[j]])
-  print(paste("You are ", round(i*100/365, 2), "% done with ", heavy_hitters[j], "!", sep = ""))
+  print(paste("You are ", round(i*100/len(unique(crantop$date)), 2), "% done with ", heavy_hitters[j], "!", sep = ""))
   }
   print(paste("You are ", round(j*100/10, 2), "% done!", sep = ""))
 }
