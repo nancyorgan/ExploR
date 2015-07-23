@@ -2,4 +2,4 @@
 *.Rapp.history
 *.Rhistory
 Data/*
-*.idea/
+*.idea/*
