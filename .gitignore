@@ -3,3 +3,4 @@
 *.Rhistory
 Data/*
 *.idea/*
+Python/.idea/workspace.xml
