@@ -48,15 +48,15 @@ write.table(cranberry2014, "/Users/nancyorgan/Desktop/cranberry2014.txt", sep = 
 write.table(cranberry2015, "/Users/nancyorgan/Desktop/cranberry2015.txt", sep = ",")
 
 ########### Read in individual years' data sets ########
-cranberry2012 = fread("/Users/nancyorgan/Desktop/cranberry2012.txt", sep=",", header=FALSE, select = c(2,8))
-cranberry2013 = fread("/Users/nancyorgan/Desktop/cranberry2013.txt", sep=",", header=FALSE, select = c(2,8))
-cranberry2014 = fread("/Users/nancyorgan/Desktop/cranberry2014.txt", sep=",", header=FALSE, select = c(2,8))
-cranberry2015 = fread("/Users/nancyorgan/Desktop/cranberry2015.txt", sep=",", header=FALSE, select = c(2,8))
+cranberry2012 = fread("/Users/nancyorgan/Documents/ExploR/Data/cranberry2012.txt", sep=",", header=FALSE, select = c(2,8))
+cranberry2013 = fread("/Users/nancyorgan/Documents/ExploR/Data/cranberry2013.txt", sep=",", header=FALSE, select = c(2,8))
+cranberry2014 = fread("/Users/nancyorgan/Documents/ExploR/Data/cranberry2014.txt", sep=",", header=FALSE, select = c(2,8))
+cranberry2015 = fread("/Users/nancyorgan/Documents/ExploR/Data/cranberry2015.txt", sep=",", header=FALSE, select = c(2,8))
 
 cran_all = rbind(cranberry2012, cranberry2013, cranberry2014, cranberry2015)
 names(cran_all) = c("date", "package")
-write.table(cran_all,"/Users/nancyorgan/Desktop/cran_all.txt", sep = ",")
-#read.table("/Users/nancyorgan/Desktop/cran_all.csv", sep = ",", header = FALSE)
+write.table(cran_all,"/Users/nancyorgan/Documents/ExploR/Data/cran_all.txt", sep = ",")
+cran_all = fread("/Users/nancyorgan/Documents/ExploR/Data/cran_all.txt", sep = ",", header = FALSE)
 
 ########### Find the top 10 packages from the data set #######
 
