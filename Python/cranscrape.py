@@ -21,7 +21,3 @@ for label in violin_base.xaxis.get_ticklabels():
 violin_base
 
 sns.plt.show()
-
-test = pd.DataFrame({"c":[1,2,3],
-                     "a":[4,5,6],
-                     "t":[7,8,9]})
