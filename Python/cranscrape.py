@@ -7,7 +7,6 @@ import matplotlib as plt
 heavy_counts = pd.read_csv("/Users/nancyorgan/Desktop/heavy_counts.txt")
 heavy_counts = heavy_counts[heavy_counts.max(columns=1).order(ascending=False).index]
 
-#heavy_counts = heavy_counts.sort()
 
 #print(cran_all.head())
 violin_base = sns.violinplot(data = heavy_counts, inner = None, cut=0)
@@ -21,3 +20,9 @@ for label in violin_base.xaxis.get_ticklabels():
 violin_base
 
 sns.plt.show()
+
+
+
+
+
+
