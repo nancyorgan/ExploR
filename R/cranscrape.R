@@ -33,7 +33,7 @@ get_cran_data = function(url){
   return(cran_data_glued)
 }
 
-# Run get_cran_data on dates and SAVE to txt files
+########### Run get_cran_data on dates and SAVE to txt files #####
 # Csv's are too big to handle data this size
 cranberry2012 = get_cran_data(url2012)
 cranberry2013 = get_cran_data(url2013)
@@ -42,10 +42,10 @@ cranberry2015 = get_cran_data(url2015)
 # Check that all dates came though
 unique(cranberry2012$date) # etc...
 
-write.table(cranberry2012, "/Users/nancyorgan/Desktop/cranberry2012.txt", sep = ",")
-write.table(cranberry2013, "/Users/nancyorgan/Desktop/cranberry2013.txt", sep = ",")
-write.table(cranberry2014, "/Users/nancyorgan/Desktop/cranberry2014.txt", sep = ",")
-write.table(cranberry2015, "/Users/nancyorgan/Desktop/cranberry2015.txt", sep = ",")
+write.table(cranberry2012, "/Users/nancyorgan/Documents/ExploR/Data/cranberry2012.txt", sep = ",")
+write.table(cranberry2013, "/Users/nancyorgan/Documents/ExploR/Data/cranberry2012.txt", sep = ",")
+write.table(cranberry2014, "/Users/nancyorgan/Documents/ExploR/Data/cranberry2012.txt", sep = ",")
+write.table(cranberry2015, "/Users/nancyorgan/Documents/ExploR/Data/cranberry2012.txt", sep = ",")
 
 ########### Read in individual years' data sets ########
 cranberry2012 = fread("/Users/nancyorgan/Documents/ExploR/Data/cranberry2012.txt", sep=",", header=FALSE, select = c(2,8))
