@@ -43,9 +43,9 @@ cranberry2015 = get_cran_data(url2015)
 unique(cranberry2012$date) # etc...
 
 write.table(cranberry2012, "/Users/nancyorgan/Documents/ExploR/Data/cranberry2012.txt", sep = ",")
-write.table(cranberry2013, "/Users/nancyorgan/Documents/ExploR/Data/cranberry2012.txt", sep = ",")
-write.table(cranberry2014, "/Users/nancyorgan/Documents/ExploR/Data/cranberry2012.txt", sep = ",")
-write.table(cranberry2015, "/Users/nancyorgan/Documents/ExploR/Data/cranberry2012.txt", sep = ",")
+write.table(cranberry2013, "/Users/nancyorgan/Documents/ExploR/Data/cranberry2013.txt", sep = ",")
+write.table(cranberry2014, "/Users/nancyorgan/Documents/ExploR/Data/cranberry2014.txt", sep = ",")
+write.table(cranberry2015, "/Users/nancyorgan/Documents/ExploR/Data/cranberry2015.txt", sep = ",")
 
 ########### Read in individual years' data sets ########
 cranberry2012 = fread("/Users/nancyorgan/Documents/ExploR/Data/cranberry2012.txt", sep=",", header=FALSE, select = c(2,8))
@@ -105,8 +105,4 @@ ggplot(melted_heavy, aes(x=variable, y=value)) +
   ggtitle("Daily Downloads for the Top 10
   Downloaded R Packages 2012-2015") + 
   scale_y_continuous(breaks = seq(0, 24000, by = 2000))
-  
 
-test = data.frame(matrix(1:9,ncol = 3))
-test[,order(apply(test, 2, max),decreasing = TRUE)]
-                  
